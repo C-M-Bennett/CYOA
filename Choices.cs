@@ -264,7 +264,7 @@ namespace CYOA
                     break;
 
                 case "NOISE":
-                    Console.WriteLine("\nSlowly stalking to where the skittering noise is coming from you spot a tiny ball of fur and whiskers. It's just what your human needs, they're rubbish at catching their own food!";
+                    Console.WriteLine("\nSlowly stalking to where the skittering noise is coming from you spot a tiny ball of fur and whiskers. It's just what your human needs, they're rubbish at catching their own food!");
                     Console.WriteLine("You line up the perfect pounce... and jump!");
                     Console.WriteLine("\n\nThe End");
                     Console.WriteLine("Press 'Enter' to continue.".Pastel(Color.FromArgb(9, 176, 148)));
