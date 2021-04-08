@@ -8,9 +8,10 @@ using Figgle;
 // Console.WriteLine("Yay colours!".Pastel("#cf2be9"));
 // Console.WriteLine($"TEST! Press {"ENTER".Pastel(Color.FromArgb(165, 229, 250))} to continue");
 
-//yellow = 207, 153, 6
-//orange = 209, 85, 19
-//teal = 9, 176, 148
+//yellow = 207, 153, 6  -> brighter = 250, 188, 20
+//orange = 209, 85, 19  -> brighter = 237, 116, 52
+//teal = 9, 176, 148    -> brighter = 22, 222, 222
+//dark red = 161, 2, 2 
 
 namespace CYOA
 {
@@ -28,7 +29,7 @@ namespace CYOA
 
             Console.WriteLine(@"
             /\_/\
-            >^,^<  ,
+            =^,^=  ,
              / \   /
             (___)_/
             ".Pastel(Color.FromArgb(207, 153, 6)));
@@ -38,20 +39,6 @@ namespace CYOA
             Console.Clear();
 
         }
-
-
-        public static void EndGame()
-        {
-            Console.Clear();
-            Console.WriteLine(@"
-/\_/\
->^,^<      Congratulations!
- / \   /   
-(___)_/
-            ".Pastel(Color.FromArgb(207, 153, 6)));
-            NewGame();
-        }
-
 
         public static void NewGame()
         {
@@ -76,7 +63,63 @@ namespace CYOA
                     NewGame();
                     break;
             }
-
         }
+
+//different end conditions
+
+        public static void FailEnd()
+        {
+            Console.Clear();
+            Console.WriteLine(@"
+        /\_/\
+         x.x       Oh dear!
+         / \            That did not go well...
+        (___)____.
+            ".Pastel(Color.FromArgb(161, 2, 2)));
+            NewGame();
+        }
+
+
+        public static void SunEnd()
+        {
+            Console.Clear();
+            Console.WriteLine(@"
+                  zzz
+                zz
+        /\_/\  z
+        =-,-=        Congratulations!
+         / \   ,        You are blissfully happy in the way that only a cat asleep in the sun can be.
+        (___)__/
+            ".Pastel(Color.FromArgb(250, 188, 20)));
+            NewGame();
+        }
+
+
+        public static void MouseEnd()
+        {
+            Console.Clear();
+            Console.WriteLine(@"
+
+        (_)_(_)
+         (o.o)     Congratulations!
+         (   )          You are the mightiest of hunters and the mouse is yours!
+         ==o==   
+            ".Pastel(Color.FromArgb(22, 222, 222)));
+            NewGame();
+        }
+
+
+        public static void TiredEnd()
+        {
+            Console.Clear();
+            Console.WriteLine(@"
+        /\_/\
+        =^,^=  ,   Congratulations!
+         / \   /      You are satisfyingly tired and you snooze until the sun goes down
+        (___)_/            and it is finally time to go tell the humans to feed you. 
+            ".Pastel(Color.FromArgb(237, 116, 52)));
+            NewGame();
+        }
+
     }
 }

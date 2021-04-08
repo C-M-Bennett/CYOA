@@ -14,6 +14,12 @@ namespace CYOA
             TitleScreen.StartGame();
             Choices.Choice1();
             Choices.Choice2();
+            Choices.Choice3();
+            Choices.Choice4();
+            Choices.Choice5();
+            Choices.Choice6();
+            Choices.Choice7();
+         
         }
 
 
